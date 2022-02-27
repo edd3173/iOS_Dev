@@ -207,7 +207,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="122"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD" userLabel="0">
-                                        <rect key="frame" x="324.5" y="31" width="61.5" height="60"/>
+                                        <rect key="frame" x="332.5" y="31" width="61.5" height="60"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,7 +217,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gC2-i9-XzD" firstAttribute="centerY" secondItem="kfu-Z9-IQJ" secondAttribute="centerY" id="69y-T2-emT"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="d6d-uj-PkF"/>
+                                    <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="Rbe-YS-bo7"/>
                                 </constraints>
                             </view>
                         </subviews>
