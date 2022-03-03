@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
 
     @IBOutlet var heightLabel: UILabel!
     @IBOutlet var weightLabel: UILabel!
     @IBOutlet var heightSliderLabel: UISlider!
     @IBOutlet var weightSliderLabel: UISlider!
+    
+    var calculatorBrain = CalculatorBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +34,24 @@ class ViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: Any) {
         let height = heightSliderLabel.value
         let weight = weightSliderLabel.value
-        let bmi = weight / (height*height)
-        
+       
+        calculatorBrain.calculateBMI(height: height,weight: weight)
+        // make gate
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
+    
+    //before we enter gate, prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToResult"{
+            let destinationVC = segue.destination as! ResultViewController // scope down
+            destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
+        }
+    }
+    
     
 }
 
